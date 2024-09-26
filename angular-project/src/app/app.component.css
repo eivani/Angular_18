@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'YourFontName';
+  src: url('/fonts/YourFontFile.woff2') format('woff2'),
+       url('/fonts/YourFontFile.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
