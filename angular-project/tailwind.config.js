@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['Your Font Name', 'sans-serif'], // Replace 'sans-serif' with a fallback font
+        sans: ['IRANSans']
       },
     },
   },
