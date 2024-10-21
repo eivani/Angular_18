@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 import { AgGridAngular } from 'ag-grid-angular';
-import { ColDef } from 'ag-grid-community';
+import { ColDef, GridOptions } from 'ag-grid-community';
 
 @Component({
   selector: 'app-grid',
@@ -10,20 +10,15 @@ import { ColDef } from 'ag-grid-community';
   styleUrl: './grid.component.scss'
 })
 export class GridComponent {
+  @Input() rowData: any = [];
+  @Input() colDefs: any = [];
+
   pagination = true;
   paginationPageSize = 500;
   paginationPageSizeSelector = [200, 500, 1000];
 
-  rowData = [
-    { make: "Tesla", model: "Model Y", price: 64950, electric: true },
-    { make: "Ford", model: "F-Series", price: 33850, electric: true },
-    { make: "Toyota", model: "Corolla", price: 29600, electric: true },
-  ];
 
-  colDefs: ColDef[] = [
-    { field: "make", sortable: true },
-    { field: "model", sortable: true  },
-    { field: "price", sortable: true  },
-    { field: "electric", sortable: true  }
-  ];
+  ngOnChanges(changes: SimpleChanges) {
+
+  }
 }
