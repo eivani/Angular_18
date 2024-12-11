@@ -1,10 +1,17 @@
 <div style="width: 100%;">
-  <ag-grid-angular    class="ag-theme-alpine"  style="width: 100%; height: 500px;"
+  <ag-grid-angular class="ag-theme-alpine" style="width: 100%; height: 500px;"
   [pagination]="pagination"
-  [paginationPageSize]="paginationPageSize"
-  [paginationPageSizeSelector]="paginationPageSizeSelector"
-  [rowData]="rowData"
-  [columnDefs]="colDefs"
-  [animateRows]="true"
-  />
+    [paginationPageSize]="paginationPageSize"
+    [paginationPageSizeSelector]="paginationPageSizeSelector"
+    [rowData]="rowData"
+    [columnDefs]="colDefs"
+    [animateRows]="true"
+    [rowDragManaged]="true"
+    [rowSelection]="rowSelection"
+    [editType]="'fullRow'"
+    (rowClicked)='onRowClicked($event)'
+    (cellClicked)='onCellClicked($event)'
+    (selectionChanged)='onSelectionChanged($event)'
+    (gridReady)="onGridReady($event)"
+    (rowValueChanged)="onCellValueChanged($event)"/>
 </div>

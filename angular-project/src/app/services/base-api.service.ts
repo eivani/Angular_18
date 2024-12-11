@@ -19,6 +19,11 @@ export class BaseApiService {
     if (options) return this.http.post(url, data, options);
     else return this.http.post(url, data);
   }
+  public PATCH(url: string, data: any, headers?: { [key: string]: string }[], params?: { [key: string]: string }[]) {
+    const options = this.createOptions(headers, params);
+    if (options) return this.http.patch(url, data, options);
+    else return this.http.patch(url, data);
+  }
 
   public DELETE(url: string, id?: any, headers?: { [key: string]: string }[], params?: { [key: string]: string }[]) {
     const options = this.createOptions(headers, params);
