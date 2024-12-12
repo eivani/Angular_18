@@ -19,6 +19,7 @@ export class ProductListComponent implements OnInit {
   private gridApi!: GridApi
   public selectedProdouct = [];
   public form!: FormGroup;
+  public paginationPageSize :number= 0;
 
   constructor(public baseApi: BaseApiService) {
   }
@@ -38,9 +39,10 @@ export class ProductListComponent implements OnInit {
   }
 
   public getProduct() {
-    this.baseApi.GET('http://localhost:3000/products').subscribe((product: any) => {
+    this.baseApi.GET(`http://localhost:3000/products?_page=1&_limit=10`).subscribe((product: any) => {
       this.rowData = product;
 
+      this.paginationPageSize = product.lenght;
       const fields = Object.keys(this.rowData[0]);
 
       const result: any = fields.map((field, index) => (

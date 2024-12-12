@@ -13,13 +13,13 @@ export class GridComponent {
   @Input() rowData: any = [];
   @Input() colDefs: any = [];
   @Input() rowSelection: 'multiple' | 'single' = 'multiple';
+  @Input() paginationPageSize: number = 500;
   @Output() gridReady1 = new EventEmitter<GridApi>();
   @Output() selectedData = new EventEmitter<GridApi>();
   @Output() onCellValueChange = new EventEmitter<GridApi>();
 
   pagination = true;
-  paginationPageSize = 500;
-  paginationPageSizeSelector = [200, 500, 1000];
+  paginationPageSizeSelector = [2, 5, 10, 20];
   private gridApi!: GridApi;
 
 
@@ -39,9 +39,8 @@ export class GridComponent {
     this.gridReady1.next(this.gridApi);
   }
 
-  onCellValueChanged(e:any){
-    console.log('ffffff');
-
+  onCellValueChanged(e: any) {
     this.onCellValueChange.emit(e)
   }
+
 }

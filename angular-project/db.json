@@ -27,6 +27,27 @@
       "description": "Description for Product 44",
       "price": 400000,
       "image": "https://via.placeholder.com/150"
+    },
+    {
+      "name": "sara",
+      "description": "hi",
+      "price": 23900000,
+      "image": "https://via.placeholder.com/150",
+      "id": 5
+    },
+    {
+      "name": "total",
+      "description": "hi",
+      "price": 27900000,
+      "image": "https://via.placeholder.com/150",
+      "id": 6
+    },
+    {
+      "name": "total",
+      "description": " salam",
+      "price": 287000000,
+      "image": "https://via.placeholder.com/150",
+      "id": 7
     }
   ]
 }

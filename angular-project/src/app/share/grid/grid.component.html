@@ -6,12 +6,11 @@
     [rowData]="rowData"
     [columnDefs]="colDefs"
     [animateRows]="true"
-    [rowDragManaged]="true"
-    [rowSelection]="rowSelection"
     [editType]="'fullRow'"
     (rowClicked)='onRowClicked($event)'
     (cellClicked)='onCellClicked($event)'
     (selectionChanged)='onSelectionChanged($event)'
     (gridReady)="onGridReady($event)"
-    (rowValueChanged)="onCellValueChanged($event)"/>
+    (rowValueChanged)="onCellValueChanged($event)"
+    />
 </div>
