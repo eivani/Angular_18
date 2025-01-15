@@ -102,7 +102,6 @@ export class ProductListComponent implements OnInit {
 
   public onCellValueChanged(e: any) {
     this.baseApi.PATCH(`http://localhost:3000/products/${e.data.id}`, e.data).subscribe((product: any) => {
-      console.log(product);
       this.gridApi.setGridOption("rowData", this.rowData);
     })
   }
